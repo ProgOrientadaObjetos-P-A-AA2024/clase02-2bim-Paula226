@@ -18,7 +18,8 @@ public class Ejecutor1 {
         double costoAsig = 50.5;
         
         EstudianteDistancia estDistancia = new EstudianteDistancia(nombre,
-                apellido, identificacion, edad, numAsignaturas, costoAsig);
+                apellido, identificacion, edad, numAsignaturas, 
+                costoAsig);
         
         estDistancia.calcularMatriculaDistancia();
         

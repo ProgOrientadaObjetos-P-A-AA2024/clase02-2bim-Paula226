@@ -7,9 +7,9 @@ public class EstudianteDistancia extends Estudiante{
     double costoAsignatura;
     double matriculaDistancia;
     
-        
+    // se utiliza de la calase padre para a;adir en todas las clases con el super     
     public EstudianteDistancia(String n, String ap, String iden, int e, 
-            int numAsg, double costoAsg){
+            int numAsg, double costoAsg){// recibe parametros 
         super(n, ap, iden, e);
         numeroAsignaturas = numAsg;
         costoAsignatura = costoAsg;

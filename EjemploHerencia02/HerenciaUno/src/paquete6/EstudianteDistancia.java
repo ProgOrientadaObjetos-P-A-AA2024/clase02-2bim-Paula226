@@ -13,7 +13,7 @@ public class EstudianteDistancia extends Estudiante{
         numeroAsignaturas = numAsg;
         costoAsignatura = costoAsg;
     }
-    
+    //pasarela para pasar valores 
     public EstudianteDistancia(String n, String ap, String iden, int e){
         super(n, ap, iden, e);
       

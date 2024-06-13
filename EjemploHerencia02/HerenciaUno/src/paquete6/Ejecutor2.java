@@ -23,23 +23,41 @@ public class Ejecutor2 {
         Scanner entrada = new Scanner(System.in);
         boolean bandera = true;
         String cadena = "";
-        
+    
+
         while(bandera){
-            System.out.println("ingresa un saludo");
-            String saludo = entrada.nextLine();
-            cadena = String.format("%s%s\n", cadena, saludo);
-            System.out.println("Desea salir, pulse S");
-            String opcion = entrada.nextLine();
-            if(opcion.equals("S")){
+        System.out.println("Ingresa el Estudiante: ");
+        System.out.println("Ingrese los Nombre");
+        String n = entrada.nextLine();
+        System.out.println("Ingrese los Apellido");
+        String a = entrada.nextLine();
+        System.out.println("Ingrese la identificacion");
+        String iden = entrada.nextLine();
+        System.out.println("Ingrese la edad");
+        String ed = entrada.nextLine();
+        System.out.println("Ingrese el numero de Costo:");
+        int creditos = entrada.nextInt();
+        System.out.println("Costo de Credito:");
+        double costo = entrada.nextDouble();
+        entrada.nextLine(); 
+        
+            EstudiantePresencial estudiante = new EstudiantePresencial(n, a, iden, ed, creditos ,costo);
+            estudiante.calcularMatriculaPresencial();
+            cadena = String.format("%s%s\n", cadena, estudiante);
+         
+        
+            System.out.println("Desea ingresar otro estudiante? (si/no)");
+            String respuesta = entrada.nextLine();
+            if (respuesta.equalsIgnoreCase("no")) {
                 bandera = false;
             }
+        
         }
+         System.out.println(cadena);
+            
         
-        System.out.printf("%s\n", cadena);
-        
-        
-    }
-}
+        }
+    }   
 
 
 

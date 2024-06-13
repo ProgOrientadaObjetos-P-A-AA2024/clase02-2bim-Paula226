@@ -7,12 +7,12 @@ public class EstudiantePresencial extends Estudiante{
     double costoCredito;
     double matriculaPresencial;
     
-    public EstudiantePresencial(String n, String a, String iden, int ed){
+    public EstudiantePresencial(String n, String a, String iden, String ed1, int ed, double costo){
         super(n, a, iden, ed);
     }
     
     public EstudiantePresencial(String n, String a, String iden, int ed, 
-            double costo, int creditos){
+            int creditos, double costo){
         super(n, a, iden, ed);
         costoCredito = costo;
         numeroCreditos = creditos;
@@ -48,5 +48,22 @@ public class EstudiantePresencial extends Estudiante{
     public double obtenerMatriculaPresencial(){
         return matriculaPresencial;
     }
-    
+       @Override
+    public String toString() {
+       String cadena = String.format("Nombre: %s\n"
+               + " Apellido: %s\n"
+               + " Identificación: %s\n"
+               + "Edad: %d\n"
+               + "Número de Créditos: %d\n"
+               + "Costo por Crédito: %.2f\n"
+               + "Total Matrícula: %.2f\n",
+                nombresEstudiante,
+                apellidosEstudiante,
+                identificacionEstudiante,
+                edadEstudiante,
+                numeroCreditos,
+                costoCredito,
+                matriculaPresencial);
+        return cadena;
+    }
 }
