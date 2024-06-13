@@ -8,7 +8,8 @@ public class EstudianteDistancia extends Estudiante{
     private double matriculaDistancia;
     
     public EstudianteDistancia(String n, String ap, String iden, int e){
-        super(n, ap, iden, e);
+        super(n, ap, iden, e); // el constructor de estudianate distancia le esta otorgando datos y los envuia }}}
+                                       //
     }
     
     // 2.  Método establecerNumeroAsginaturas(numero: Real)
@@ -40,6 +41,19 @@ public class EstudianteDistancia extends Estudiante{
     // 7. Método obtenerMatriculaDistancia() : Real
     public double obtenerMatriculaDistancia(){
         return matriculaDistancia;
+    }
+    //Varia ya que teien que llamar un toString con deiferentes datos //
+    public String toString () {
+        String cadena = String.format("%s\n"
+                +"Numero de asignatura: %d\n"
+                + "Valor Asignatura: %.2f\n"
+                + " Valor Matricula: %.2f\n",
+                super.toString(),
+                numeroAsignaturas,
+                costoAsignatura,
+                obtenerMatriculaDistancia());
+        
+        return cadena;
     }
 
 }

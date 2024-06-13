@@ -1,4 +1,5 @@
 package paquete2;
+//Porque se necesita de un contructor para poder proceder con el programa
 
 public class EstudianteDistancia extends Estudiante{
     

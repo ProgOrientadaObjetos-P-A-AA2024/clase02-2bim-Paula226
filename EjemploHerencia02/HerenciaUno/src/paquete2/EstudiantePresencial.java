@@ -1,6 +1,7 @@
 
 package paquete2;
 
+//Porque se necesita de un contructor que se encuentra en estudiante para poder proceder con el programa//
 public class EstudiantePresencial extends Estudiante{
     
     /*1.  Declarar
